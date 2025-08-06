@@ -1,0 +1,50 @@
+.page-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 2rem;
+    z-index: 1000;
+}
+
+.home-link {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.home-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #333;
+    transition: width .2s ease;
+}
+
+.home-link:hover::after {
+    width: 100%;
+    left: 0;
+    background: #000;
+}
+
+.home-link:hover {
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 1rem 1.5rem;
+    }
+    .home-link {
+        font-size: 1rem;
+    }
+} 
